@@ -1,0 +1,13 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15%;
+    background-color:aliceblue;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(91, 46, 55);
+}
+
