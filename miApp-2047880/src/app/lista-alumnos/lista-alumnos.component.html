@@ -23,3 +23,13 @@
       </ion-item-options>
     </ion-item-sliding>
 </ion-list>
+<form #alumnosForm="ngForm"(ngSubmit)="agregarAlumno()">
+  <ion-label>Nombre:</ion-label>
+  <ion-input reqired [{ngModel}]="alumno.Nombre" placeholder="Ejemplo:Eduardo" name="Nombre"></ion-input>
+  <ion-label>
+    <ion-checkbox [{ngModel}]="alumno.presente" name="presente"></ion-checkbox>
+  </ion-label>
+  <div>
+    <ion-button type="Submit">Agregar</ion-button>
+  </div>
+</form>
