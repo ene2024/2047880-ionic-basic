@@ -7,8 +7,13 @@ import { HttpClient } from '@angular/common/http';
 export class ConsultaService {
 
   constructor(private http: HttpClient) { }
+
   getProductos() {    
-    return this.http.get('https://fakestoreapi.com/products');
+    return this.http.get('https://fakestoreapi.com/products')
   }
 
+
+  getProductoDetalle(id: string) {
+    return this.http.get('https://fakestoreapi.com/products/'+ id)
+  }
 }
