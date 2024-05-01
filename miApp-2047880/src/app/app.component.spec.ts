@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {

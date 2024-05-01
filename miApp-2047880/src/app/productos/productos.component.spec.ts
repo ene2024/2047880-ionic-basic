@@ -2,7 +2,8 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { ProductosComponent } from './productos.component';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+import { NgModule, } from '@angular/core';
 
 describe('ProductosComponent', () => {
   let component: ProductosComponent;
@@ -11,7 +12,8 @@ describe('ProductosComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ProductosComponent ],
-      imports: [IonicModule.forRoot(),IonicModule,RouterModule]
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+      imports: [IonicModule.forRoot(),IonicModule,RouterModule,NgModule]
     }).compileComponents();
 
 
