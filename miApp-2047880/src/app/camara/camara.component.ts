@@ -8,16 +8,14 @@ import { Foto } from '../foto.model';
 })
 export class CamaraComponent  implements OnInit  {
 
-  constructor(private foto: FotoServiceService) { }
+  constructor(private fotoSvc : FotoServiceService) { }
 
   ngOnInit() {}
 
-  public fotos: Foto[] = this.foto.fotos;
+  public fotos: Foto[] = this.fotoSvc.fotos;
 
-  tomarFoto(){
-
-    this.foto.addNewToGallery()
-
+  async tomarFoto(){
+    await this.fotoSvc.addNewToGallery();
   }
 
 }

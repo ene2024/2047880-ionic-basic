@@ -13,15 +13,10 @@ import { Foto } from './foto.model';
 export class FotoServiceService {
 
   constructor() { }
-  public fotos: Foto[] = [];
 
 
   public async addNewToGallery() {    
 
-    this.fotos.unshift({
-      filepath: '',
-      webViewPath:fotoCamara.webPath
-    })
     // Toma Foto    
     
     const capturedPhoto = await Camera.getPhoto({      
@@ -31,5 +26,12 @@ export class FotoServiceService {
     source: CameraSource.Camera,      quality: 100    
     
     })
+
+    this.fotos.unshift({
+      filepath: '',
+      webViewPath: capturedPhoto.webPath
+    })
   };
+  public fotos: Foto[] = [];
+
 }
